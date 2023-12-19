@@ -256,6 +256,10 @@ h2{
     color: white;
     border-radius: 7px;
 }
+.ajoutFim{
+    display: flex;
+    flex-direction: flex;
+}
 /* ------------------------------------------- */
 @media screen and (max-width:1440px) {
     .navOuvert{
