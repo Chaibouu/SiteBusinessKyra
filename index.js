@@ -17,7 +17,7 @@ burger.addEventListener("click",()=>{
     navLink.style.display="block";
     ferme.style.display="block";
     burger.style.display="none";
-    listNav.classList.add("navFermer")
+    listNav.classList.add("navFermer") 
 })
 
 ferme.addEventListener("click",()=>{
