@@ -51,3 +51,29 @@ data.forEach((element)=>{
      dataContacts.push(message);
 })
  */
+
+/* ---------------------------Base de Données-------------------------------- */
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import {collection,getDocs,getFirestore} from "firebase/firestore"
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBjtm-e31v9bwtFPiTkwhV_09ZJhPaLiFY",
+  authDomain: "businesskyra.firebaseapp.com",
+  projectId: "businesskyra",
+  storageBucket: "businesskyra.appspot.com",
+  messagingSenderId: "116680662181",
+  appId: "1:116680662181:web:e50593cb3c3b0699c6814c"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+const dababase = getFirestore(app)
+const utilisateurs = collection(dababase,'utilisateurs')
+const film = collection(dababase,'film')
+
+/* -------------------------------------------------------------------------- */
