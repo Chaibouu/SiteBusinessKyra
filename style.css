@@ -278,9 +278,21 @@ h2{
     border: 1px solid rgb(180, 180, 180);
     width: 100%;
     margin-bottom: 10px;
+    outline: none;
+}
+.signUp div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .btnSignUp{
-    
+    padding: 8px;
+    width: 50%;
+    border: none;
+    background-color:#1327a9;
+    color: white;
+    border-radius: 7px;
 }
 
 /* ------------------------------------------- */
