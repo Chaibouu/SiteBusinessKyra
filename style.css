@@ -270,7 +270,23 @@ h2{
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-
+}
+.signIn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 15px;
+    
+}
+.signIn input{
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid rgb(180, 180, 180);
+    outline: none;
 }
 .signUp input{
     padding: 8px;
@@ -280,19 +296,26 @@ h2{
     margin-bottom: 10px;
     outline: none;
 }
-.signUp div{
+.signUp div,.signIn div{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.btnSignUp{
+.btnSignUp,.btnSignIn{
     padding: 8px;
     width: 50%;
     border: none;
     background-color:#1327a9;
     color: white;
     border-radius: 7px;
+}
+.creercompte{
+    margin-top: 20px;
+}
+.creercompte a{
+    color: #1327a9;
+    text-decoration: underline;
 }
 
 /* ------------------------------------------- */
