@@ -14,7 +14,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.7.1/firebase-app.js" integrity="sha512-VJoCeD6CVgc+UcA67bs8RTmqwzTdDoj9BiWrQ32Bkl7YdSxAbHOLBVpUbWxvOnV3bCyM1+/2/vnbNDwduxP7+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
   </head>
   <body>
     <main>
@@ -187,5 +187,44 @@
     </main>
     <script src="data.js"></script>
     <script src="index.js"></script>
+    <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js'
+  
+      // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+      import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js'
+  
+      // Add Firebase products that you want to use
+      import { getAuth } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js'
+      import { getFirestore, collection, getDocs, addDocs } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js'
+      // ref, uploadBytesResumable, getDownloadURL, deleteObject
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBjtm-e31v9bwtFPiTkwhV_09ZJhPaLiFY",
+      authDomain: "businesskyra.firebaseapp.com",
+      projectId: "businesskyra",
+      storageBucket: "businesskyra.appspot.com",
+      messagingSenderId: "116680662181",
+      appId: "1:116680662181:web:e50593cb3c3b0699c6814c"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    const dababase = getFirestore(app)
+    const utilisateurs = collection(dababase,'utilisateurs')
+    const film = collection(dababase,'film')
+
+    const formSignIn = document.querySelector('.signIn')
+
+    /* Ajouter un utilisateur à la base*/
+    const formSignUp = document.querySelector('.signUp')
+    formSignUp.addEventListener('submit',(e)=>{
+      e.preventDefault()
+      addDoc(utilisateurs,{
+        
+      })
+    })
+
+    </script>
   </body>
 </html>
