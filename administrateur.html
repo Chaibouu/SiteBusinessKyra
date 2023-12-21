@@ -51,17 +51,17 @@
 
       <section id="contact">
         <div class="conta">
-            <form action="" class="ajoutFim">
+            <form  class="ajoutFim">
                 <label for="">Nom du film</label>
-                <input class="nomFilm" type="text" placeholder="Nom du Film">
+                <input class="nomFilm" name="nomFilm" type="text" placeholder="Nom du Film">
                 <label for="">type</label>
-                <input class="typeFilm" type="text" placeholder="Série ou Film">
+                <input class="typeFilm" name="typeFilm" type="text" placeholder="Série ou Film">
                 <label for="">Saison</label>
-                <input class="saisonFilm" type="text" placeholder="Entrer les Saison">
+                <input class="saisonFilm" name="saisonFilm" type="text" placeholder="Entrer les Saison">
                 <label for="">Image</label>
-                <input class="imageFilm" type="file" placeholder="Image du film">
+                <input class="imageFilm"  name="imageFilm" type="file" placeholder="Image du film">
                 
-               <div> <button class="btnContact">Ajouter</button></div>
+                <button type="submit" class="btnFilm">Ajouter</button>
             </form>
           </div>    
       </section>
@@ -115,7 +115,7 @@
       </footer>
     </main>
     
-    <script src="dataContats.js"></script>
     <script src="index.js"></script>
+    <script type="module" src="data.js"></script>
   </body>
 </html>
