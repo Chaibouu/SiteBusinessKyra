@@ -26,7 +26,7 @@ ferme.addEventListener("click",()=>{
     burger.style.display="block";
 })
 btn.addEventListener("click",()=>{
-    window.location.href="login.html"
+    window.location.href="signIn.html"
 })
 
 
@@ -54,8 +54,8 @@ data.forEach((element)=>{
 
 /* ---------------------------Base de Données-------------------------------- */
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import {collection,getDocs,getFirestore} from "firebase/firestore"
+/* import { initializeApp } from "firebase/app";
+import {collection,getDocs,getFirestore} from "firebase/firestore" */
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
