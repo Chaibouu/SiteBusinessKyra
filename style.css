@@ -283,8 +283,14 @@ h2{
 .ajoutFim button{
     width: 75%;
 }
-
-
+.btnFilm{
+    padding: 8px;
+    width: 130px;
+    border: none;
+    background-color:#1327a9;
+    color: white;
+    border-radius: 7px;
+}
 
 
 .signUp{

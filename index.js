@@ -30,7 +30,7 @@ btn.addEventListener("click",()=>{
 })
 
 
-data.forEach((element)=>{
+/* data.forEach((element)=>{
     mov.innerHTML +=`<div class="card">
                      <img src="${element.src}" alt="" />
                      <div class="titre">
@@ -38,7 +38,7 @@ data.forEach((element)=>{
                        <span class="annee">${element.saison}</span>
                      </div>
                 </div>`
-})
+}) */
 
 /* btnContact.addEventListener("click",(e)=>{
     e.preventDefault();
