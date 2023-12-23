@@ -102,7 +102,7 @@ const firebaseConfig = {
 
 
 
-/*   data.forEach((element)=>{
+  data.forEach((element)=>{
     mov.innerHTML +=`<div class="card">
                      <img src="${element.src}" alt="" />
                      <div class="titre">
@@ -110,4 +110,4 @@ const firebaseConfig = {
                        <span class="annee">${element.saison}</span>
                      </div>
                 </div>`
-}) */
+})
