@@ -102,7 +102,7 @@ const firebaseConfig = {
 
 
 
-  data.forEach((element)=>{
+/*   data.forEach((element)=>{
     mov.innerHTML +=`<div class="card">
                      <img src="${element.src}" alt="" />
                      <div class="titre">
@@ -110,6 +110,21 @@ const firebaseConfig = {
                        <span class="annee">${element.saison}</span>
                      </div>
                 </div>`
-})
+}) */
 
-add
+getDocs(film).then((snapshot) =>{
+  let films = [];
+  snapshot.docs.forEach((doc) => (
+    films.push({...doc.data(), id: doc.id})
+  ))
+  console.log(films);
+  films.forEach((element)=>{
+    mov.innerHTML +=`<div class="card">
+                     <img src="${element.imageUrl}" alt="" />
+                     <div class="titre">
+                       <span class="nom">${element.nom}</span>
+                       <span class="annee">${element.type}</span>
+                     </div>
+                </div>`
+})
+})
