@@ -10,6 +10,7 @@ const prenomContact = document.querySelector(".prenomContact");
 const btnContact = document.querySelector(".btnContact");
 const btn = document.querySelector(".btn");
 
+import films from './data.js';
 
 burger.addEventListener("click",()=>{
     navLink.style.display="block";

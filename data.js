@@ -1,5 +1,5 @@
 const test = document.getElementById("test")
-console.log(test);
+
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js'
   
 // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
@@ -76,9 +76,18 @@ const firebaseConfig = {
   let saisonFilm = document.querySelector('.saisonFilm')
   let imageFilm = document.querySelector('.imageFilm')
   let btnFilm = document.getElementById('btnFilm')
-
   const formSignIn = document.querySelector('.signIn')
  
+/* Function pour bloquer l'input saison si c'est un film */
+  typeFilm.addEventListener('click',(e)=>{
+    if (typeFilm.value === "Film") {
+      saisonFilm.disabled = true;
+    } else {
+      saisonFilm.disabled = false;
+    }
+    console.log(typeFilm.value);
+  })
+
   /* Ajouter un utilisateur à la base*/
   const formSignUp = document.querySelector('.signUp')
     // await addFile(data.photo[0],`users/${user?.id}`,'photo');
@@ -96,7 +105,12 @@ const firebaseConfig = {
 
     btnFilm.addEventListener('click',(e)=>{
     e.preventDefault()
-    formSignUpFunction()
+    if (!nomFilm && !typeFilm && imageFilm) {
+      formSignUpFunction()
+    }
+    else{
+      alert("Veuillez remplir les champs")
+    }
     
   })
 
@@ -116,13 +130,13 @@ const firebaseConfig = {
 }) */
 
 
-
+let films = [];
 getDocs(film).then((snapshot) =>{
-  let films = [];
+  
   snapshot.docs.forEach((doc) => (
     films.push({...doc.data(), id: doc.id})
   ))
-
+    
    films.forEach((element)=>{
 /*      test.innerHTML +=`<div class="card">
                      <img src="${element.imageUrl}" alt="" />
@@ -139,3 +153,4 @@ getDocs(film).then((snapshot) =>{
 })
 
 
+export default films;

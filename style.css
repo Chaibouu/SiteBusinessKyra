@@ -345,7 +345,15 @@ h2{
     color: #1327a9;
     text-decoration: underline;
 }
-
+select{
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid rgb(180, 180, 180);
+    outline: none;
+}
 /* ------------------------------------------- */
 @media screen and (max-width:1440px) {
     .navOuvert{
