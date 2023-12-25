@@ -79,14 +79,14 @@ const firebaseConfig = {
   const formSignIn = document.querySelector('.signIn')
  
 /* Function pour bloquer l'input saison si c'est un film */
-  typeFilm.addEventListener('click',(e)=>{
+/*   typeFilm.addEventListener('click',(e)=>{
     if (typeFilm.value === "Film") {
       saisonFilm.disabled = true;
     } else {
       saisonFilm.disabled = false;
     }
     console.log(typeFilm.value);
-  })
+  }) */
 
   /* Ajouter un utilisateur à la base*/
   const formSignUp = document.querySelector('.signUp')

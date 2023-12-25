@@ -11,6 +11,18 @@ const btnContact = document.querySelector(".btnContact");
 const btn = document.querySelector(".btn");
 
 import films from './data.js';
+films.forEach((element)=>{
+         test.innerHTML +=`<div class="card">
+                         <img src="${element.imageUrl}" alt="" />
+                         <div class="titre">
+                           <span class="nom">${element.nom}</span>
+                           connerie
+                           <span class="annee">${element.type}</span>
+                         </div>
+                    </div>`           
+    }) 
+
+
 
 burger.addEventListener("click",()=>{
     navLink.style.display="block";
