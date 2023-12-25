@@ -54,13 +54,16 @@
                 <label for="">Nom du film</label>
                 <input class="nomFilm" name="nomFilm" type="text" placeholder="Nom du Film">
                 <label for="">type</label>
-                <input class="typeFilm" name="typeFilm" type="text" placeholder="Série ou Film">
+                <select class="typeFilm" name="typeFilm">
+                  <option value="Film">Film</option>
+                  <option value="Série">Série</option>
+                </select>
                 <label for="">Saison</label>
                 <input class="saisonFilm" name="saisonFilm" type="text" placeholder="Entrer les Saison">
                 <label for="">Image</label>
                 <input class="imageFilm"  name="imageFilm" type="file" placeholder="Image du film">
                 <div>
-                  <button type="submit" class="btnFilm">Ajouter</button>
+                  <button type="submit" id="btnFilm" class="btnFilm">Ajouter</button>
                 </div>
                 
             </form>
@@ -116,7 +119,7 @@
       </footer>
     </main>
     
-    <script src="index.js"></script>
     <script type="module" src="data.js"></script>
+<!--     <script src="index.js"></script> -->
   </body>
 </html>

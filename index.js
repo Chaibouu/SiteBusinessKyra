@@ -1,4 +1,3 @@
-
 const burger = document.querySelector(".contBurger");
 const navLink = document.querySelector(".navLink");
 const ferme = document.querySelector(".ferme");
@@ -10,7 +9,6 @@ const nomContact = document.querySelector(".nomContact");
 const prenomContact = document.querySelector(".prenomContact");
 const btnContact = document.querySelector(".btnContact");
 const btn = document.querySelector(".btn");
-
 
 
 burger.addEventListener("click",()=>{
@@ -28,7 +26,6 @@ ferme.addEventListener("click",()=>{
 btn.addEventListener("click",()=>{
     window.location.href="signIn.html"
 })
-
 
 /* data.forEach((element)=>{
     mov.innerHTML +=`<div class="card">

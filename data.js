@@ -1,3 +1,5 @@
+const test = document.getElementById("test")
+console.log(test);
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js'
   
 // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
@@ -73,7 +75,8 @@ const firebaseConfig = {
   let typeFilm = document.querySelector('.typeFilm')
   let saisonFilm = document.querySelector('.saisonFilm')
   let imageFilm = document.querySelector('.imageFilm')
-  let btnFilm = document.querySelector('.btnFilm')
+  let btnFilm = document.getElementById('btnFilm')
+
   const formSignIn = document.querySelector('.signIn')
  
   /* Ajouter un utilisateur à la base*/
@@ -112,19 +115,27 @@ const firebaseConfig = {
                 </div>`
 }) */
 
+
+
 getDocs(film).then((snapshot) =>{
   let films = [];
   snapshot.docs.forEach((doc) => (
     films.push({...doc.data(), id: doc.id})
   ))
-  console.log(films);
-  films.forEach((element)=>{
-    mov.innerHTML +=`<div class="card">
+
+   films.forEach((element)=>{
+/*      test.innerHTML +=`<div class="card">
                      <img src="${element.imageUrl}" alt="" />
                      <div class="titre">
                        <span class="nom">${element.nom}</span>
+                       connerie
                        <span class="annee">${element.type}</span>
                      </div>
-                </div>`
+                </div>`  */
+
+                
+}) 
+
 })
-})
+
+
