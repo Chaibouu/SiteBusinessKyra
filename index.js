@@ -1,3 +1,4 @@
+
 const burger = document.querySelector(".contBurger");
 const navLink = document.querySelector(".navLink");
 const ferme = document.querySelector(".ferme");
@@ -11,8 +12,10 @@ const btnContact = document.querySelector(".btnContact");
 const btn = document.querySelector(".btn");
 
 import films from './data.js';
+console.log(films);
 films.forEach((element)=>{
-         test.innerHTML +=`<div class="card">
+    console.log(element);
+         mov.innerHTML +=`<div class="card">
                          <img src="${element.imageUrl}" alt="" />
                          <div class="titre">
                            <span class="nom">${element.nom}</span>
@@ -69,3 +72,5 @@ btn.addEventListener("click",()=>{
 
 
 /* -------------------------------------------------------------------------- */
+
+

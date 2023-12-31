@@ -1,4 +1,3 @@
-const test = document.getElementById("test")
 
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js'
   
@@ -77,7 +76,8 @@ const firebaseConfig = {
   let imageFilm = document.querySelector('.imageFilm')
   let btnFilm = document.getElementById('btnFilm')
   const formSignIn = document.querySelector('.signIn')
- 
+  let afficheInfo = document.querySelector('.afficheInfo')
+
 /* Function pour bloquer l'input saison si c'est un film */
 /*   typeFilm.addEventListener('click',(e)=>{
     if (typeFilm.value === "Film") {
@@ -103,7 +103,7 @@ const firebaseConfig = {
     console.log('====================================');
     }
 
-    btnFilm.addEventListener('click',(e)=>{
+/*     btnFilm.addEventListener('click',(e)=>{
     e.preventDefault()
     if (!nomFilm && !typeFilm && imageFilm) {
       formSignUpFunction()
@@ -113,7 +113,7 @@ const firebaseConfig = {
     }
     
   })
-
+ */
 
 
 
@@ -129,26 +129,26 @@ const firebaseConfig = {
                 </div>`
 }) */
 
-
+let ff=[]
 let films = [];
 getDocs(film).then((snapshot) =>{
   
   snapshot.docs.forEach((doc) => (
     films.push({...doc.data(), id: doc.id})
-  ))
     
-   films.forEach((element)=>{
-/*      test.innerHTML +=`<div class="card">
-                     <img src="${element.imageUrl}" alt="" />
-                     <div class="titre">
-                       <span class="nom">${element.nom}</span>
-                       connerie
-                       <span class="annee">${element.type}</span>
-                     </div>
-                </div>`  */
-
-                
-}) 
+  ))
+   console.log(films);
+    films.forEach((element)=>{
+    console.log(element);
+    afficheInfo.innerHTML +=`<div class="card">
+                         <img src="${element.imageUrl}" alt="" />
+                         <div class="titre">
+                           <span class="nom">${element.nom}</span>
+                           connerie
+                           <span class="annee">${element.type}</span>
+                         </div>
+                    </div>`           
+    }) 
 
 })
 
