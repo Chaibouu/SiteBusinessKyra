@@ -116,6 +116,7 @@ export default function Home() {
         <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
         <div>
           {/* commente */}
+          {/* commente */}
         </div>
       </div>
       <Footer />
