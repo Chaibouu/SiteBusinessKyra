@@ -115,7 +115,7 @@ export default function Home() {
         <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
         <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
         <div>
-          
+          {/* commente */}
         </div>
       </div>
       <Footer />
