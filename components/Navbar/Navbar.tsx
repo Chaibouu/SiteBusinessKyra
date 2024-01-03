@@ -10,6 +10,7 @@ const Navbar = () => {
         {name:"Accueil",link:"/"},
         {name:"Films",link:"/allEvents"},
         {name:"Séries",link:"/about"},
+        {name:"Boutique",link:"/boutique"},
         {name:"Contact",link:"/detailEven"},
     ]
     const toggleMenu = () => {
@@ -28,7 +29,7 @@ const Navbar = () => {
                     width={200} />
             </div>
             <div className=''>
-                <ul className={`flex text-white md:bg-transparent bg-[#05115A]-300 flex-col absolute left-0 z-[-1] md:static md:flex-row items-center md:justify-around w-full transition-all duration-500 ease-in  ${menuOpen? 'top-16 opacity-100':'top-[-490px] md:opacity-100 opacity-0'}`}  >
+                <ul className={`flex text-white bg-slate-900 opacity-90 md:bg-transparent  flex-col absolute left-0 z-[10] md:static md:flex-row items-center md:justify-around w-full transition-all duration-500 ease-in  ${menuOpen? 'top-16 opacity-100':'top-[-490px] md:opacity-100 opacity-0'}`}  >
                     {
                         Links.map((link)=>(
                             <li key={link.name} className={`mx-4 md:my-0 my-4`} >
