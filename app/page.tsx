@@ -113,22 +113,26 @@ export default function Home() {
         </a>
       </div> */}
       
-      <div className='w-full h-[100vh] bg-blue-200'>
+      <div className='w-full h-[90vh]'>
       <Navbar />
-        <div className='w-full h-full bg-red-400'>   
+        <div className='h-full bg-gray-800'>   
             <div className="h-full">
               <Carousel className='' leftControl=" " rightControl=" ">
-                <img src="/images/Kraven2023.jpeg" className='h-full w-full' alt="..." />
-                <img src="/images/Babilon23.webp" alt="..." />
-                <img src="/images/blackAdam.jpg" alt="..." />
-                <img src="images/bloodshot.jpeg" alt="..." />
-                <img src="/images/Fast2011.jpg" alt="..." />
+                <img src="/images/Kraven2023.jpeg" className='h-full md:w-[500px] w-[400px]' alt="..." />
+                <img src="/images/Babilon23.webp" className='h-full md:w-[500px] w-[400px]' alt="..." />
+                <img src="/images/blackAdam.jpg" className='h-full md:w-[500px] w-[400px]' alt="..." />
+                <img src="images/bloodshot.jpeg" className='h-full md:w-[500px] w-[400px]' alt="..." />
+                <img src="/images/Fast2011.jpg" className='h-full md:w-[500px] w-[400px]'  alt="..." />
               </Carousel>
             </div>
         </div>
         
       </div>
       <div>
+      <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
+      <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
+      <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
+      <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
       <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
         <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
       </div>
