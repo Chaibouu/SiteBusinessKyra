@@ -112,22 +112,25 @@ export default function Home() {
           </p>
         </a>
       </div> */}
+      
+      <div className='w-full h-[100vh] bg-blue-200'>
       <Navbar />
-      <div>
-        <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
-        <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
-        <div>   
-            <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-              <Carousel leftControl="left" rightControl="right">
-                <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg" alt="..." />
-                <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg" alt="..." />
-                <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg" alt="..." />
-                <img src="https://flowbite.com/docs/images/carousel/carousel-4.svg" alt="..." />
-                <img src="https://flowbite.com/docs/images/carousel/carousel-5.svg" alt="..." />
+        <div className='w-full h-full bg-red-400'>   
+            <div className="h-full">
+              <Carousel className='' leftControl=" " rightControl=" ">
+                <img src="/images/Kraven2023.jpeg" className='h-full w-full' alt="..." />
+                <img src="/images/Babilon23.webp" alt="..." />
+                <img src="/images/blackAdam.jpg" alt="..." />
+                <img src="images/bloodshot.jpeg" alt="..." />
+                <img src="/images/Fast2011.jpg" alt="..." />
               </Carousel>
-              
             </div>
         </div>
+        
+      </div>
+      <div>
+      <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
+        <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
       </div>
       <Footer />
     </main>
