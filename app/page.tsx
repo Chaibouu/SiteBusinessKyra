@@ -112,9 +112,9 @@ export default function Home() {
           </p>
         </a>
       </div> */}
-      
-      <div className='w-full h-[90vh]'>
       <Navbar />
+      <div className='w-full h-[550px]'>
+      
         <div className='h-full bg-gray-800'>   
             <div className="h-full">
               <Carousel className='' leftControl=" " rightControl=" ">
@@ -129,11 +129,7 @@ export default function Home() {
         
       </div>
       <div>
-      <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
-      <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
-      <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
-      <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
-      <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
+        <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
         <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
       </div>
       <Footer />
