@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { Carousel } from 'flowbite-react';
+import { Carousel,Card  } from 'flowbite-react';
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
@@ -114,7 +114,6 @@ export default function Home() {
       </div> */}
       <Navbar />
       <div className='w-full h-[550px]'>
-      
         <div className='h-full bg-gray-800'>   
             <div className="h-full">
               <Carousel className='' leftControl=" " rightControl=" ">
@@ -126,11 +125,27 @@ export default function Home() {
               </Carousel>
             </div>
         </div>
-        
       </div>
-      <div>
-        <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
-        <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
+      <div className='mt-5'>
+        <div className='flex flex-col items-center'>
+          <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
+          <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
+        </div>
+        <div className='mt-4'>
+          <Card
+              className="max-w-sm m-2"
+              renderImage={() => <Image width={500} height={500} src="/images/Fast2011.jpg" alt="image 1" />}
+            >
+              <div className='flex items-center justify-between'>
+                  <p className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Fast and Furious 9
+                  </p>
+                  <p className="font-normal text-gray-700 dark:text-gray-400">
+                    Film
+                  </p>
+              </div>
+          </Card>
+        </div>
       </div>
       <Footer />
     </main>
