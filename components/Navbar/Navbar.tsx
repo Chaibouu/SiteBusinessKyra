@@ -42,7 +42,7 @@ const Navbar = () => {
                 <button className="text-white text-xs w-14 border p-1 rounded-full">SignIn</button>
                 {/* <div className='ms-4 bg-red-600 rounded-full h-10 w-10'> */}
                 <div className="mx-4 mr-12">
-                        <Avatar img="/images/people/profile-picture-5.jpg" rounded status="busy" statusPosition="top-right" />
+                        <Avatar img="/images/Babilon23.webp" rounded status="busy" statusPosition="top-right" />
                 </div>
                 <div onClick={()=>setMenuOpen(!menuOpen)} className="ms-4 text-white text-3xl absolute right-6 top-4 cursor-pointer md:hidden ">
                     <Icon icon={menuOpen? "iconamoon:close-duotone":"iconamoon:menu-burger-horizontal"} />
