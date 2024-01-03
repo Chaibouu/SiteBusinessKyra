@@ -3,8 +3,80 @@ import Image from 'next/image'
 import { Carousel,Card  } from 'flowbite-react';
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
+import {db} from "../firebase/firebase.js"
+import { useState,useEffect  } from 'react';
+import { doc, getDoc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
+
 
 export default function Home() {
+
+  const [films, setFilms] = useState([])
+  
+ /*  useEffect(()=>{
+    const film = ref(db,'films')
+    get(film).then((snapshot) =>{
+      
+      if (snapshot.exists()) {
+        const filmArray = Object.entries(snapshot.val()).map(([id, data])=>({
+          id,
+          ...data,
+        }))
+        setFilms(filmArray);
+      }else{
+        console.log('Erreur de chargement de données');
+      }
+    })
+      .catch((error)=>{
+        console.error(error);
+      })
+  },[]) */
+
+  /* useEffect(() => {
+    const fetchFilms = async () => {
+      const filmRef = ref(db, 'films');
+      try {
+        const snapshot = await get(filmRef);
+
+        if (snapshot.exists()) {
+          const filmArray = Object.entries(snapshot.val()).map(([id, data]) => ({
+            id,
+            ...data,
+          }));
+          setFilms(filmArray);
+        } else {
+          console.log('Erreur de chargement de données');
+        }
+      } catch (error) {
+        console.error('Erreur lors de la récupération des données :', error);
+      }
+    };
+
+    fetchFilms();
+  }, []); */
+
+  // Get a list of cities from your database
+
+  console.log(db);
+  
+async function getCities() {
+  const querySnapshot = await getDocs(collection(db, "film"));
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data());
+});
+}
+console.log(films);
+
+
+useEffect(() => {
+  getCities()
+
+}, [])
+
+
+
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -145,9 +217,17 @@ export default function Home() {
                   </p>
               </div>
           </Card>
+         {/*  <div>
+            {films.map((film)=>(
+              <div key={film.id}>
+                <h2>{film.nom}</h2>
+                <p>{film.type}</p>
+              </div>
+            ))}
+          </div> */}
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   )
 }

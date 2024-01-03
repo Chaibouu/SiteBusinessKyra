@@ -1,13 +1,10 @@
 // firebase.js
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js'
-/* import { initializeApp } from 'firebase/app'; */
+import { initializeApp } from 'firebase/app';
 /* import { getStorage } from 'firebase/storage'; */
 // Add Firebase products that you want to use
-import { getAuth } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js'
-import { getFirestore, collection, getDocs, addDoc } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js'
-import { getStorage,ref, uploadBytesResumable, getDownloadURL, deleteObject } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-storage.js'
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
-/* const firebaseConfig = {
+const firebaseConfig = {
     // Vos informations de configuration Firebase ici
     apiKey: process.env.NEXT_PUBLIC_APIKEY,
     authDomain: process.env.NEXT_PUBLIC_AUTHDOMAIN,
@@ -15,21 +12,14 @@ import { getStorage,ref, uploadBytesResumable, getDownloadURL, deleteObject } fr
     storageBucket: process.env.NEXT_PUBLIC_STORAGEBUCKET,
     messagingSenderId: process.env.NEXT_PUBLIC_MESSAGINGSENDERID,
     appId: process.env.NEXT_PUBLIC_APPID,
-    measurementId: process.env.NEXT_PUBLIC_MEASUREMENTID
+    // measurementId: process.env.NEXT_PUBLIC_MEASUREMENTID
 
-}; */
+};
 
-const firebaseConfig = {
-    apiKey: "AIzaSyBjtm-e31v9bwtFPiTkwhV_09ZJhPaLiFY",
-    authDomain: "businesskyra.firebaseapp.com",
-    projectId: "businesskyra",
-    storageBucket: "businesskyra.appspot.com",
-    messagingSenderId: "116680662181",
-    appId: "1:116680662181:web:e50593cb3c3b0699c6814c"
-  };
 
 const app = initializeApp(firebaseConfig);
-const storage = getStorage(firebaseApp);
+const db = getFirestore(app);
+/* const storage = getStorage(firebaseApp); */
 
 
 const addFile = async (file, folderName, filename) => {
@@ -70,10 +60,20 @@ const deleteFile = async (fileURL) => {
 
 
 
+/* let films = [];
+getDocs(film).then((snapshot) =>{
+  
+  snapshot.docs.forEach((doc) => (
+    films.push({...doc.data(), id: doc.id})
+  ))
+   console.log(films);
+
+})
+ */
 
 
 
 
 
 
-export { storage };
+export {db };
