@@ -217,6 +217,7 @@ useEffect(() => {
                     Film
                   </p>
               </div>
+              {/* commente */}
           </Card>
          {/*  <div>
             {films.map((film)=>(
