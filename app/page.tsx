@@ -219,15 +219,6 @@ useEffect(() => {
               </div>
               {/* commente */}
               {/* commente */}
-              {/* commente */}
-              {/* commente */}
-              {/* commente */}
-              {/* commente */}
-              {/* commente */}
-              {/* commente */}
-              {/* commente */}
-              {/* commente */}
-              {/* commente */}
 
 
           </Card>
