@@ -82,6 +82,7 @@ export default function Home() {
         </div>
       </div>
       {/* comment */}
+      {/* comment */}
       {/* <Footer /> */}
     </main>
   )
