@@ -1,7 +1,4 @@
-// firebase.js
 import { initializeApp } from 'firebase/app';
-/* import { getStorage } from 'firebase/storage'; */
-// Add Firebase products that you want to use
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 const firebaseConfig = {
