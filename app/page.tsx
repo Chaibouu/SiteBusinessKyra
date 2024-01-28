@@ -5,7 +5,21 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import {db} from "../firebase/firebase.js"
 import { useState,useEffect  } from 'react';
-import { collection, getDocs } from "firebase/firestore";
+// import { collection, getDocs } from "firebase/firestore";
+import { collection, query, where, getDocs } from "firebase/firestore";
+
+
+const q = query(collection(db, "film"));
+
+const  getFilms  = async () =>{
+
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data());
+  });
+  
+}
 
 async function fetchDatabase() {
   const films = await getDocs(collection(db,"film"))
@@ -21,9 +35,17 @@ async function fetchDatabase() {
 export default function Home() {
 
   const [films, setFilms] = useState([])
+
+  useEffect(() => {
+    getFilms()
+    
+  }, [])
+  
   useEffect(()=>{
     async function fetchData(){
       const data = await fetchDatabase();
+      console.log(data);
+      
       setFilms(data)
     } 
     fetchData()
@@ -33,7 +55,7 @@ export default function Home() {
 
 
 
-
+  
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
@@ -58,30 +80,31 @@ export default function Home() {
           <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
         </div>
         <div className='mt-4'>
-          {/* <Card
-              className="max-w-sm m-2"
-              renderImage={() => <Image width={500} height={500} src="/images/Fast2011.jpg" alt="image 1" />}
-            >
-              <div className='flex items-center justify-between'>
-                  <p className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Fast and Furious 9
-                  </p>
-                  <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Film
-                  </p>
-              </div>
-          </Card> */}
+          
           <div>
             {films.map((film)=>(
-              <div key={film.id}>
-                <h2>{film.nom}</h2>
-                <p>{film.type}</p>
-              </div>
+              <Card
+                  className="max-w-sm m-2"
+                  key={film.id}
+                  renderImage={() => <Image width={500} height={500} src={film.imageUrl} alt="image 1" />}
+                >
+                  <div className='flex items-center justify-between'>
+                      <p className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        {film.nom}
+                      </p>
+                      <p className="font-normal text-gray-700 dark:text-gray-400">
+                        {film.type}
+                      </p>
+                  </div>
+              </Card>
             ))}
           </div>
         </div>
       </div>
-      
+       {/* <div key={film.id}>
+                <h2>{film.nom}</h2>
+                <p>{film.type}</p>
+              </div> */}
       {/* <Footer /> */}
     </main>
   )
