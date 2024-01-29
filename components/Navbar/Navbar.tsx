@@ -10,7 +10,7 @@ const Navbar = () => {
         {name:"Accueil",link:"/"},
         {name:"Films",link:"/allEvents"},
         {name:"Séries",link:"/about"},
-        {name:"Boutique",link:"/boutique"},
+        {name:"Boutique",link:"/ad"},
         {name:"Contact",link:"/detailEven"},
     ]
     const toggleMenu = () => {

@@ -53,7 +53,8 @@ export default function Home() {
   },[])
 
 
-
+  const filmsSection = films.filter(film => film.type === 'Film');
+  const seriesSection = films.filter(film => film.type === 'Serie');
 
   
 
@@ -74,20 +75,49 @@ export default function Home() {
             </div>
         </div>
       </div>
-      <div className='mt-5'>
+      <div className='mt-8'>
         <div className='flex flex-col items-center'>
           <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
           <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
         </div>
         <div className='mt-4'>
           
-          <div>
-            {films.map((film)=>(
+          <div className='grid grid-cols-3 gap-4'>
+            {filmsSection.map((film)=>(
               <Card
                   className="max-w-sm m-2"
                   key={film.id}
-                  renderImage={() => <Image width={500} height={500} src={film.imageUrl} alt="image 1" />}
+                 /*  renderImage={() => <Image width={500} height={500} className="w-[300px] h-[300px]" src={film.imageUrl} alt="image 1" />} */
                 >
+                  <Image width={500} height={500} className="w-[300px] h-[400px]" src={film.imageUrl} alt="image 1" />
+                  <div className='flex items-center justify-between'>
+                      <p className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        {film.nom}
+                      </p>
+                      <p className="font-normal text-gray-700 dark:text-gray-400">
+                        {film.type}
+                      </p>
+                  </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className='mt-8'>
+        <div className='flex flex-col items-center'>
+          <h1 className='text-[#F99A3A] text-4xl'>Series</h1>
+          <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
+        </div>
+        <div className='mt-4'>
+          
+          <div className='grid grid-cols-3 gap-4'>
+            {seriesSection.map((film)=>(
+              <Card
+                  className="max-w-sm m-2"
+                  key={film.id}
+                 /*  renderImage={() => <Image width={500} height={500} className="w-[300px] h-[300px]" src={film.imageUrl} alt="image 1" />} */
+                >
+                  <Image width={500} height={500} className="w-[300px] h-[400px]" src={film.imageUrl} alt="image 1" />
                   <div className='flex items-center justify-between'>
                       <p className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                         {film.nom}
