@@ -26,15 +26,7 @@ const page = () => {
                 </form>
             </div>
             {/* comment */}
-            {/* comment */}
-            {/* comment */}
-            {/* comment */}
-            {/* comment */}
-            {/* comment */}
-            {/* comment */}
-            {/* comment */}
-            {/* comment */}
-            {/* comment */}
+            
         </>
     );
 };
