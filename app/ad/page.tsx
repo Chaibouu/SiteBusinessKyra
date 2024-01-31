@@ -24,15 +24,6 @@ const page = () => {
                         <button type="submit" id="btnFilm" className="btnFilm">Ajouter</button>
                     </div>
                     {/* comment */}
-                    {/* comment */}
-                    {/* comment */}
-                    {/* comment */}
-                    {/* comment */}
-                    {/* comment */}
-                    {/* comment */}
-                    {/* comment */}
-                    {/* comment */}
-                    {/* comment */}
                 </form>
             </div>
         </>
