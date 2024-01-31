@@ -27,6 +27,7 @@ const page = () => {
                     {/* comment */}
                     {/* comment */}
                 </form>
+                </form>
             </div>
         </>
     );
