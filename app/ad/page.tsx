@@ -25,6 +25,7 @@ const page = () => {
                         <button type="submit" id="btnFilm" className="border p-2 px-8 bg-blue-700 rounded">Ajouter</button>
                     </div>
                     {/* comment */}
+                    {/* comment */}
                 </form>
             </div>
            </div>
