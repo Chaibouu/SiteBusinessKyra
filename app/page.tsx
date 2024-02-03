@@ -21,7 +21,7 @@ const  getFilms  = async () =>{
   
 }
 
-async function fetchDatabase() {
+/* async function fetchDatabase() {
   const films = await getDocs(collection(db,"film"))
   const data=[];
   films.forEach((doc) => (
@@ -29,6 +29,22 @@ async function fetchDatabase() {
   ))
   console.log(data);
   return data
+} */
+interface FilmData {
+  // Définissez ici la structure de vos données de film
+  // Par exemple :
+  id: string;
+  // Ajoutez d'autres propriétés nécessaires
+}
+async function fetchDatabase(): Promise<FilmData[]> {
+  const films = await getDocs(collection(db, 'film'));
+  const data: FilmData[] = [];
+
+  films.forEach((doc) => {
+    data.push({...doc.data(), id: doc.id });
+  });
+
+  return data;
 }
 
 
