@@ -60,9 +60,13 @@ export default function Home() {
       <div className='w-full h-[550px]'>
         <div className='h-full bg-gray-800'>
           <div className="h-full">
-            <Carousel className='' leftControl=" " rightControl=" ">
-              {/* ... */}
-            </Carousel>
+          <Carousel className='' leftControl=" " rightControl=" ">
+                <img src="/images/Kraven2023.jpeg" className='h-full md:w-[500px] w-[400px]' alt="..." />
+                <img src="/images/Babilon23.webp" className='h-full md:w-[500px] w-[400px]' alt="..." />
+                <img src="/images/blackAdam.jpg" className='h-full md:w-[500px] w-[400px]' alt="..." />
+                <img src="images/bloodshot.jpeg" className='h-full md:w-[500px] w-[400px]' alt="..." />
+                <img src="/images/Fast2011.jpg" className='h-full md:w-[500px] w-[400px]'  alt="..." />
+              </Carousel>
           </div>
         </div>
       </div>
