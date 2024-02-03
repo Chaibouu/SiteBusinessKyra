@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
     // Vos informations de configuration Firebase ici
@@ -17,7 +18,8 @@ console.log(firebaseConfig);
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-/* const storage = getStorage(firebaseApp); */
+/* const storage = getStorage(app); */
+const storage = getStorage(app);
 
 
 const addFile = async (file, folderName, filename) => {
@@ -74,4 +76,4 @@ getDocs(film).then((snapshot) =>{
 
 
 
-export {db };
+export { db, addFile,storage };

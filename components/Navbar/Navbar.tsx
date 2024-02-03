@@ -11,7 +11,7 @@ const Navbar = () => {
         {name:"Films",link:"/allEvents"},
         {name:"Séries",link:"/about"},
         {name:"Boutique",link:"/ad"},
-        {name:"Contact",link:"/detailEven"},
+        {name:"Contact",link:"/contact"},
     ]
     const toggleMenu = () => {
     console.log("Toggle menu called");

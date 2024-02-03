@@ -54,7 +54,7 @@ export default function Home() {
 
 
   const filmsSection = films.filter(film => film.type === 'Film');
-  const seriesSection = films.filter(film => film.type === 'Serie');
+  const seriesSection = films.filter(film => film.type === 'Série');
 
   
 
