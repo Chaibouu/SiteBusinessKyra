@@ -76,7 +76,7 @@ export default function Home() {
           <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
         </div>
         <div className='mt-4'>
-          <div className='grid grid-cols-3 gap-4'>
+          <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 grid-cols-1'>
             {filmsSection.map((film) => (
               <Card
                 className="max-w-sm m-2"
@@ -102,7 +102,7 @@ export default function Home() {
           <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
         </div>
         <div className='mt-4'>
-          <div className='grid grid-cols-3 gap-4'>
+          <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 grid-cols-1'>
             {seriesSection.map((film) => (
               <Card
                 className="max-w-sm m-2"
