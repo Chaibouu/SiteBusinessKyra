@@ -118,9 +118,6 @@ const Page = () => {
                     <div className='w-full flex items-center justify-center m-4 mt-8'>
                         <button type="submit" disabled={disabledButton} className={`border p-2 w-1/2 text-white px-8 bg-[#05115A] rounded ${disabledButton ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}>Envoyer</button>
                     </div>
-                    {/* comment */}
-                    {/* comment */}
-                    
                 </form>
             </div>
            </div>
