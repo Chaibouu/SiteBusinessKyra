@@ -110,7 +110,7 @@ const Page = () => {
                             </div>
                         </div>
                         <div className='my-1 flex flex-col w-full'>
-                            <label htmlFor="">Prénom</label>
+                            <label htmlFor="">Message</label>
                             <textarea id="message" name="message" value={message} onChange={handleMessageChange} cols="30" rows="5" className='md:rows="10" rounded' ></textarea>
                         </div>
 

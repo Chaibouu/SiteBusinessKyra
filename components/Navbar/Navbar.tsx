@@ -3,13 +3,14 @@ import React,{useState} from "react";
 import { Icon } from '@iconify/react';
 import Image from "next/image";
 import { Avatar } from 'flowbite-react';
+import Link from "next/link";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     let Links =[
         {name:"Accueil",link:"/"},
-        {name:"Films",link:"/allEvents"},
-        {name:"Séries",link:"/about"},
+        {name:"Films",link:"/#Film"},
+        {name:"Séries",link:"/#Serie"},
         {name:"Boutique",link:"/ad"},
         {name:"Contact",link:"/contact"},
     ]
@@ -40,7 +41,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className='flex items-center'>
-                <button className="text-white me-8 text-xs w-14 border p-1 rounded-full">SignIn</button>
+                <Link href="/signin"><button className="text-white me-8 text-xs w-14 border p-1 rounded-full">SignIn</button></Link>
                 {/* <div className='ms-4 bg-red-600 rounded-full h-10 w-10'> */}
                {/*  <div className="mx-4 mr-12">
                         <Avatar img="/images/Babilon23.webp" rounded status="online" statusPosition="top-right" />

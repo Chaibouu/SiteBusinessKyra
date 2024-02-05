@@ -70,7 +70,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='mt-8'>
+      <div className='mt-8' id='Film'>
         <div className='flex flex-col items-center'>
           <h1 className='text-[#F99A3A] text-4xl'>Films</h1>
           <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
@@ -96,7 +96,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='mt-8'>
+      <div className='mt-8' id='Serie'>
         <div className='flex flex-col items-center'>
           <h1 className='text-[#F99A3A] text-4xl'>Series</h1>
           <div className='w-20 bg-[#F99A3A] h-[2px] rounded-full'></div>
