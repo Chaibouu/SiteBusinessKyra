@@ -11,7 +11,7 @@ interface FilmData {
   id: string;
   nom: string;
   type: string;
-  imageUrl: string;
+  image: string;
   // Ajoutez d'autres propriétés nécessaires
 }
 
@@ -82,7 +82,7 @@ export default function Home() {
                 className="max-w-sm m-2"
                 key={film.id}
               >
-                <Image width={500} height={500} className="w-[300px] h-[400px]" src={`/${film.imageUrl}`} alt="image 1" />
+                <Image width={500} height={500} className="w-[300px] h-[400px]" src={film.image} alt="image 1" />
                 <div className='flex items-center justify-between'>
                   <p className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {film.nom}
@@ -108,7 +108,7 @@ export default function Home() {
                 className="max-w-sm m-2"
                 key={film.id}
               >
-                <Image width={500} height={500} className="w-[300px] h-[400px]" src={film.imageUrl} alt="image 1" />
+                <Image width={500} height={500} className="w-[300px] h-[400px]" src={film.image} alt="image 1" />
                 <div className='flex items-center justify-between'>
                   <p className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {film.nom}
