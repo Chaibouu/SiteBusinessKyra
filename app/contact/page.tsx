@@ -94,9 +94,9 @@ const Page = () => {
     return (
         <>
             <Navbar />
-           <div className='flex items-center justify-center '>
+           <div className='flex items-center justify-center bg-red-600'>
              <div className='lg:w-1/2 m-10 border'>
-                <h1 className='text-center md:text-3xl text-2xl bg-slate-700 py-4 text-white'>Contacte</h1>
+                <h3 className='text-center md:text-3xl text-2xl bg-slate-700 py-4 text-white '>Contacte</h3>
                 <form action="https://formspree.io/f/xgegalzy" method="POST" className='flex flex-col md:p-10 p-4'>
                     <div>
                         <div className='md:flex w-full'>
