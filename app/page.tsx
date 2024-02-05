@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Navbar />
-      <div className='w-full h-[550px]'>
+      <div className='w-full h-[600px]'>
         <div className='h-full bg-gray-800'>
           <div className="h-full">
           <Carousel className='' leftControl=" " rightControl=" ">
@@ -82,7 +82,7 @@ export default function Home() {
                 className="max-w-sm m-2"
                 key={film.id}
               >
-                <Image width={500} height={500} className="w-[300px] h-[400px]" src={film.imageUrl} alt="image 1" />
+                <Image width={500} height={500} className="w-[300px] h-[400px]" src={`/${film.imageUrl}`} alt="image 1" />
                 <div className='flex items-center justify-between'>
                   <p className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {film.nom}
