@@ -11,7 +11,7 @@ const Navbar = () => {
         {name:"Accueil",link:"/"},
         {name:"Films",link:"/#Film"},
         {name:"Séries",link:"/#Serie"},
-        {name:"Boutique",link:"/ad"},
+        {name:"Boutique",link:"/boutique"},
         {name:"Contact",link:"/contact"},
     ]
     const toggleMenu = () => {

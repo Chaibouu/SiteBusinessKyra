@@ -47,7 +47,7 @@ export default function Home() {
   const getFilms = async () => {
     const querySnapshot = await getDocs(collection(db, "film"));
     querySnapshot.forEach((doc) => {
-      console.log(doc.id, " => ", doc.data());
+      /* console.log(doc.id, " => ", doc.data()); */
     });
   };
 

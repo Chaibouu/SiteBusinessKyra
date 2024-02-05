@@ -51,7 +51,7 @@ const Page = () => {
             const data = await fetchDatabase();
             setUtilisa(data);
           } catch (error) {
-            console.error("Error fetching data:", error);
+           /*  console.error("Error fetching data:", error); */
           }
         };
     
@@ -61,7 +61,7 @@ const Page = () => {
       const getUser = async () => {
         const querySnapshot = await getDocs(collection(db, "utilisateurs"));
         querySnapshot.forEach((doc) => {
-          console.log(doc.id, " => ", doc.data());
+          /* console.log(doc.id, " => ", doc.data()); */
         });
       };
 
@@ -83,7 +83,6 @@ const Page = () => {
                 });
                 alert("Veuillez remplir les champs")
                 setDisabledButton(false)
-                console.log("erreur");
               return;
         }
         if (!user) {
@@ -98,7 +97,6 @@ const Page = () => {
                 theme: "dark",
                 });
                 setDisabledButton(false)
-                console.log("erreur");
               return;
         }
         if (!pass) {
@@ -113,7 +111,6 @@ const Page = () => {
                 theme: "dark",
                 });
                 setDisabledButton(false)
-                console.log("erreur");
               return;
         }
         else{
@@ -126,9 +123,8 @@ const Page = () => {
             if (matchedUser) {
             // Vérifiez si le mot de passe correspond
             if (matchedUser.pass === pass) {
-                console.log('Connexion réussie!');
+                /* console.log('Connexion réussie!'); */
                 // Effectuez ici les actions nécessaires pour une connexion réussie
-                console.log(pass);
                 router.push('/ad');
             } else {
                 toast.error('Mot de passe incorrect', { /* ... */ });
